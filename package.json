@@ -7,7 +7,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "patch-release": "NODE_ENV=production npm run build && npm version patch && npm publish",
+    "patch-release": "npm version patch && npm publish",
     "clean": "rimraf dist",
     "start": "NODE_ENV=development nodemon --exec babel-node src/index.js",
     "build": "npm run clean && babel src --out-dir dist"
