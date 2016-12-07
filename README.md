@@ -24,7 +24,7 @@ $ timezone-compare
 List of available timezones are [here][timezones].
 
 ## Note : Timezones are fetched from moment-timezone
-[Moment Timezone -- Lists of timezones](http://momentjs.com/timezone/docs/#/data-loading/getting-zone-names/)
+[Moment Timezone -- getting a list timezones](http://momentjs.com/timezone/docs/#/data-loading/getting-zone-names/)
 
 Other arbitrary timezones can be added to `src/informalTimezones.js` if needed.
 
