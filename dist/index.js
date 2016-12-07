@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 var _inquirer = require('inquirer');

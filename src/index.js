@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import inquirer from 'inquirer';
 import momentTimezone from 'moment-timezone';
 const timezones = momentTimezone.tz.names();
