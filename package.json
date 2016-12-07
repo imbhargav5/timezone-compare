@@ -2,11 +2,12 @@
   "name": "timezone-compare",
   "version": "1.0.0",
   "bin" : {
-    "snippet" : "./dist/index.js"
+    "timezone-compare" : "./dist/index.js"
   },
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "patch-release": "NODE_ENV=production npm run build && npm version patch && npm publish && git push --follow-tags",
     "clean": "rimraf dist",
     "start": "NODE_ENV=development nodemon --exec babel-node src/index.js",
     "build": "babel src --out-dir dist"
