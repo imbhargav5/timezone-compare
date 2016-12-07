@@ -1,0 +1,34 @@
+{
+  "name": "timezone-compare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "NODE_ENV=development nodemon --exec babel-node src/index.js",
+    "build": "babel src --out-dir dist"
+  },
+  "author": "Bhargav Ponnapalli",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2017": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "dotenv": "^2.0.0",
+    "eslint": "^3.9.1",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.5.4",
+    "webpack": "2.1.0-beta.27",
+    "webpack-dev-server": "2.1.0-beta.11"
+  },
+  "dependencies": {
+    "inquirer": "^2.0.0",
+    "moment": "^2.17.1",
+    "moment-timezone": "^0.5.10",
+    "table": "^4.0.1"
+  }
+}
