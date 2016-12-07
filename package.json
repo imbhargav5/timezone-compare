@@ -4,7 +4,7 @@
   "bin": {
     "timezone-compare": "./dist/index.js"
   },
-  "description": "",
+  "description": "Get a list of times across 2 different timezones for easy checking",
   "main": "dist/index.js",
   "scripts": {
     "patch-release": "npm version patch && npm publish",
@@ -12,8 +12,9 @@
     "start": "NODE_ENV=development nodemon --exec babel-node src/index.js",
     "build": "npm run clean && babel src --out-dir dist"
   },
+  "repository" : "bhargav175/timezone-compare",
   "author": "Bhargav Ponnapalli",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.0",
