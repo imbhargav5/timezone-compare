@@ -4,13 +4,28 @@
   "bin": {
     "timezone-compare": "./dist/index.js"
   },
+  "keywords": [
+    "timezone-compare",
+    "timezone",
+    "compare",
+    "calendar",
+    "datetime",
+    "gmt",
+    "moment",
+    "date",
+    "time",
+    "zone",
+    "moment-timezone",
+    "node",
+    "module"
+  ],
   "description": "A cli tool to get a list of times across 2 different timezones for easy checking",
   "main": "dist/index.js",
   "scripts": {
     "patch-release": "npm version patch && npm publish",
     "clean": "rimraf dist",
     "start": "NODE_ENV=development nodemon --exec babel-node src/index.js",
-    "build": "npm run clean && babel src --out-dir dist"
+    "build": "npm run clean && BABEL_ENV=production NODE_ENV=production babel src --out-dir dist"
   },
   "repository": "bhargav175/timezone-compare",
   "author": "Bhargav Ponnapalli",
