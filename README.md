@@ -30,7 +30,7 @@ Other arbitrary timezones can be added to `src/informalTimezones.js` if needed.
 
 ## :+1: Like it?
 
-Support timezone-compare by giving [feedback](https://github.com/bhargav175/timezone-compare/issues), publishing new webpack blocks or just by 🌟 starring the project!
+Support timezone-compare by giving [feedback](https://github.com/bhargav175/timezone-compare/issues) or just by 🌟 starring the project!
 
 ## :scroll: License
 
