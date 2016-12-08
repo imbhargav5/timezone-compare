@@ -28,7 +28,7 @@ List of available timezones are [here][timezones].
 
 Other arbitrary timezones can be added to `src/informalTimezones.js` if needed.
 
-## :like: Like it?
+## :+1: Like it?
 
 Support timezone-compare by giving [feedback](https://github.com/bhargav175/timezone-compare/issues), publishing new webpack blocks or just by 🌟 starring the project!
 
