@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});exports.default={IST:'Asia/Kolkata'};
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});exports.default={IST:'Asia/Kolkata'};module.exports=exports['default'];
