@@ -1,5 +1,7 @@
 # `$ timezone-compare`
 
+[![Build Status](https://travis-ci.org/bhargav175/timezone-compare.svg?branch=master)](https://travis-ci.org/bhargav175/timezone-compare)
+
 :zap: Cli tool to get a list of times across 2 different timezones for easy checking.
 
 ## Screenshot-cli
