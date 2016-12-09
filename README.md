@@ -7,7 +7,7 @@
 ![Screenshot](https://raw.githubusercontent.com/bhargav175/timezone-compare/master/assets/timezone-compare-cli.gif "Screenshot")
 
 
-## Usage - es6
+## :clipboard: Usage - ES6
 
 ```javascript
 import TimezoneCompare from 'timezone-compare';
