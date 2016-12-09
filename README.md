@@ -1,13 +1,13 @@
 # `$ timezone-compare`
 
-## Screenshot
+Cli tool to get a list of times across 2 different timezones for easy checking.
+
+## Screenshot-cli
 
 ![Screenshot](https://raw.githubusercontent.com/bhargav175/timezone-compare/master/assets/timezone-compare-cli.gif "Screenshot")
 
 
 ## Usage - es6
-
-![Screenshot](https://raw.githubusercontent.com/bhargav175/timezone-compare/master/assets/timezone-compare.gif "Screenshot")
 
 ```javascript
 import TimezoneCompare from 'timezone-compare';
@@ -19,6 +19,10 @@ const {times} = tz.getTimesAsStrings();
 // [[IST times as moments][GMT times as moments]]
 
 ```
+
+
+![Screenshot](https://raw.githubusercontent.com/bhargav175/timezone-compare/master/assets/timezone-compare.gif "Screenshot")
+
 
 ## :cloud: Usage - cli
 
