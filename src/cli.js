@@ -35,7 +35,9 @@ const questions = [
 
 inquirer.prompt(questions).then(function (answers) {
   const {from_timezone, to_timezone} = answers;
-  const data = new TimezoneCompare(from_timezone,to_timezone).getTimes();
+  const {timezones , times} = new TimezoneCompare(from_timezone,to_timezone).getTimesAsStrings();
+  const data = [].concat([timezones]).concat(times);
+  console.log(data);
   const output = table(data, tableConfig);
   console.log(output);
 });

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import momentTimezone from 'moment-timezone';
-import { getValidZoneName, FORMAT} from './utils';
+import { getValidZoneName,NUM_HOURS ,FORMAT} from './utils';
 
 
 export default class TimezoneCompare{
@@ -11,18 +11,37 @@ export default class TimezoneCompare{
     this.from_timezone = from_timezone;
     this.to_timezone =to_timezone;
   }
-  getTimes(){
+  _getMoments(){
+    const {from_timezone, to_timezone} = this;
+    const times = [];
+    const start =  momentTimezone.tz(from_timezone).startOf('day');
+    const end =  start.clone().add(NUM_HOURS,'hours');
+    start.add(-30,'minutes');
+    while(start.isBefore(end)){
+      const left = start.add(30,'minutes').clone();
+      const right = left.clone().tz(to_timezone);
+      times.push([left,right]);
+    }
+    return times;
+  }
+  getTimesAsStrings(){
       const {from_timezone, to_timezone} = this;
-      const data = [];
-      const start =  momentTimezone.tz(from_timezone).startOf('day');
-      const end =  start.clone().add(30,'hours');
-      start.add(-30,'minutes');
-      data.push([from_timezone, to_timezone]);
-      while(start.isBefore(end)){
-        const left = start.add(30,'minutes').clone();
-        const right = left.clone().tz(to_timezone);
-        data.push([`${left.format(FORMAT)} ${from_timezone}`,`${right.format(FORMAT)} ${to_timezone}`]);
-      }
-      return data;
+      const times = this._getMoments().map(([left,right])=>{
+        return  [`${left.format(FORMAT)} ${from_timezone}`,`${right.format(FORMAT)} ${to_timezone}`];
+      });
+      const timezones = [from_timezone, to_timezone];
+      return {
+        times,
+        timezones
+      };
+  }
+  getTimesAsMoments(){
+    const {from_timezone, to_timezone} = this;
+    const times = this._getMoments();
+    const timezones = [from_timezone, to_timezone];
+    return {
+      times,
+      timezones
+    };
   }
 }
