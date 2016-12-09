@@ -25,12 +25,14 @@
     "patch-release": "npm version patch && npm publish",
     "clean": "rimraf dist",
     "start": "NODE_ENV=development nodemon --exec babel-node src/index.js",
-    "build": "npm run clean && BABEL_ENV=production NODE_ENV=production babel src --out-dir dist"
+    "build": "npm run clean && BABEL_ENV=production NODE_ENV=production babel src --out-dir dist",
+    "test": "ava"
   },
   "repository": "bhargav175/timezone-compare",
   "author": "Bhargav Ponnapalli",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.7",
@@ -52,5 +54,20 @@
     "moment": "^2.17.1",
     "moment-timezone": "^0.5.10",
     "table": "^4.0.1"
+  },
+  "ava": {
+    "source": [
+      "/src/**/*.{js,jsx}",
+      "!dist/**/*"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true,
+    "powerAssert": false,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
+
 }
