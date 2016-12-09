@@ -2,16 +2,12 @@
 
 ## Screenshot
 
-![Screenshot](https://raw.githubusercontent.com/bhargav175/timezone-compare/master/assets/screenshot_1.png "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/bhargav175/timezone-compare/master/assets/timezone-compare-cli.gif "Screenshot")
 
-
-## :cloud: Installation
-
-```bash
-npm install -g timezone-compare
-```
 
 ## Usage - es6
+
+![Screenshot](https://raw.githubusercontent.com/bhargav175/timezone-compare/master/assets/timezone-compare.gif "Screenshot")
 
 ```javascript
 import TimezoneCompare from 'timezone-compare';
@@ -24,9 +20,10 @@ const {times} = tz.getTimesAsStrings();
 
 ```
 
-## Usage - cli
+## :cloud: Usage - cli
 
 ``` bash
+$ npm install -g timezone-compare
 $ timezone-compare
 ? Enter FROM timezone (America/New_York) IST
 ? Enter TO timezone (Europe/London) GMT
