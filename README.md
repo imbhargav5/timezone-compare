@@ -11,7 +11,20 @@
 npm install -g timezone-compare
 ```
 
-## Usage
+## Usage - es6
+
+```javascript
+import TimezoneCompare from 'timezone-compare';
+const tz = new TimezoneCompare('IST', 'GMT');
+const {times} = tz.getTimesAsStrings();
+// [[IST times as strings][GMT times as strings]]
+
+//const {times} = tz.getTimesAsMoments(); //If you need a 2d array of moments
+// [[IST times as moments][GMT times as moments]]
+
+```
+
+## Usage - cli
 
 ``` bash
 $ timezone-compare
