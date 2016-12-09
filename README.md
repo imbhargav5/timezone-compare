@@ -13,7 +13,7 @@ npm install -g timezone-compare
 
 ## Usage - es6
 
-```bash
+```javascript
 import TimezoneCompare from 'timezone-compare';
 const tz = new TimezoneCompare('IST', 'GMT');
 const {times} = tz.getTimesAsStrings();
