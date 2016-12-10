@@ -1,6 +1,6 @@
 {
   "name": "timezone-compare",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "bin": {
     "timezone-compare": "./dist/cli.js"
   },
